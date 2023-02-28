@@ -1,0 +1,384 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+}
+
+body {
+  width: 100vw;
+  background-color: #f1f3f6;
+}
+
+/* navigation container styles */
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2874f0;
+  margin: 0;
+  width: 100%;
+  outline: 0;
+  flex-wrap: wrap;
+  box-shadow: 0px 0px 5px -2px whitesmoke;
+}
+
+.navigation-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style-type: none;
+  flex-wrap: wrap;
+  min-width: 122px;
+}
+
+.navigation-links > li {
+  min-width: 55px;
+  margin: 13px 20px;
+}
+
+
+/* navigation left side logo container */
+.navigation-logo-container {
+  margin: 12px 8px;
+  min-width: 81px;
+}
+.navigation-logo1 {
+  width: 75px;
+  margin-bottom: 0;
+}
+
+.navigation-logo-details {
+  margin-top: -4px;
+}
+
+.navigation-logo-text {
+  font-style: italic;
+  font-size: 12px;
+  color: white;
+}
+
+span.navigation-logo-text {
+  color: yellow;
+}
+
+.navigation-logo-plus {
+  width: 10px;
+}
+
+/* navigation search bar*/
+.navigation-search {
+  min-width: 192px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 0px 5px -2px rgb(0 0 1);
+  width: fit-content;
+  margin: 0 20px;
+  background-color: white;
+  border: 0;
+  border-radius: 2px;
+  outline: 0;
+  padding: 2px;
+}
+
+.navigation-search-input {
+  outline: none;
+  width: 25vw;
+  height: 35px;
+  border: 0;
+  padding: 0 10px;
+  background: transparent;
+}
+
+.navigation-search-icon {
+  padding: 3px 10px;
+}
+.navigation-search-input::placeholder {
+  font-size: 15px;
+}
+
+/* navigation links */
+
+.navigation-links-li-login {
+  background-color: white;
+  height: fit-content;
+  padding: 5px 30px;
+}
+
+.navigation-links-login {
+  text-decoration: none;
+
+  font-size: 15px;
+  color: #2874f0;
+  font-weight: 600;
+  margin: 0 10px;
+  border-radius: 2px;
+  cursor: pointer;
+
+}
+
+.navigation-dropdown span {
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.navigation-dropdown-arrow  {
+  padding: 0 3px;
+  color: white;
+  transform: rotate(-90deg);
+  transition: transform 0.2s ease-in-out;
+}
+
+.navigation-dropdown:hover .navigation-dropdown-arrow {
+  transform: rotate(-270deg);
+}
+
+.navigation-cart > a {
+  padding: 0 3px;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* menubar items */
+.menubar {
+  background-color: #fff;
+  box-shadow: 0px 6px 12px -10px rgb(0 0 0 / 20%)
+
+}
+.menubar-list {
+  gap: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0px 10px 0px;
+  flex-wrap: wrap;
+}
+
+.menubar-list-item {
+  min-width: 65px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  column-gap: 50px;
+  font-weight: 500;
+  font-size: 14px;
+
+}
+
+.menubar-list-item-img {
+  width: 64px;
+  height: 64px;
+  
+}
+.menubar-list-item-detail {
+  margin-top: 8px;
+
+}
+
+.menubar-list-item-detail:hover {
+  color: #2874f0;
+}
+
+.menubar-list-item-icon{
+  fill: black;
+  padding: 0 3px;
+  color: black;
+  transform: rotate(-90deg);
+  transition: transform 0.2s ease-in-out;
+}
+
+.menubar-list-item:hover .menubar-list-item-icon {
+  transform: rotate(-270deg);
+  fill: #2874f0;
+}
+
+
+
+/* Body content */
+
+.webpage-body{
+  
+  /* min-height: 100vh; */
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Content Row 1 ............................*/
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.content-left {
+  width: 1178px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fff;
+  padding: 20px;
+  margin-right: 10px;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.content-left-hr {
+  border: none;
+  border-top: 0.8px solid rgb(212, 211, 211);
+  color: whitesmoke;
+  height: 0.1px;
+}
+
+.content-left-heading > button {
+  box-shadow: 0px 0px 5px -2px rgb(0 0 1);
+    padding: 12px 20px;
+    background-color: #2874f0;
+    border: 0;
+    font-size: 13px;
+    color: white;
+    font-weight: 600;
+    width: fit-content;
+    margin: 0 10px;
+    border-radius: 2px;
+    cursor: pointer;
+    
+}
+
+.content-left-heading{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  min-width: 450px;
+  overflow: hidden;
+}
+
+.content-left-heading-group1{
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+}
+
+.content-left-heading-group1 > span {
+  margin-left: 20px;
+  color: grey;
+}
+
+.content-left-product-img {
+  object-fit: contain;
+  min-width: 200px;
+  max-height: 150px;
+}
+
+.content-left-products {
+  display: flex;
+  width: 1178px;
+  padding-top: 14px;
+  gap: 18px;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+
+.content-left-product-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.content-left-product-details > h6 {
+  margin: 15px 0 0;
+  font-size: 14px;
+}
+.content-left-product-details > h5 {
+  margin: 8px 0 0;
+  font-size: 16px;
+  color: #388e3c;
+  font-weight: 400;
+}
+.content-left-product-details > span {
+  margin: 7px 0 0;
+  font: 14px;
+  font-weight: 200;
+  color: #212121;
+}
+
+.content-left-item{
+  width: 210px;
+}
+
+.content-left-product-details > span{
+  font-size: 14px;
+}
+
+.content-right {
+  min-width: 223px;
+  /* width: 18%; */
+  padding: 4px;
+  background-color: #fff;
+}
+@media screen and (max-width: 800px) {
+  .content-right {
+    /* Apply some styles */
+    display: none;
+  }
+}
+
+.content-right-ads {
+  width: 215px;
+  height: auto;
+}
+
+
+/* Modified styling of Content row 2............................... */
+
+.content-2 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 10px auto;
+
+  /* margin: 0 auto; */
+}
+
+.content-left-2 {
+  width: 1410px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fff;
+  padding: 20px;
+  margin-right: 10px;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Both scrolable buttons */
+
+.content-left-button {
+  background-color: whitesmoke;
+  position: absolute;
+  right: -1px;
+  transform: rotate(180deg);
+  box-shadow: 1px 2px 10px -1px rgb(0 0 0 / 30%);
+  /* overflow: auto; */
+  /* white-space: nowrap; */
+  -webkit-overflow-scrolling: touch;
+}
+.content-left-button > svg {
+  margin: 35px 15px;
+  color: #212121;;
+}
