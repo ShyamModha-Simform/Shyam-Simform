@@ -18,75 +18,448 @@
     <title>Travel Website</title>
   </head>
   <body>
+
+    <!-- Overlay -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">New message</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="email" class="col-form-label">Email</label>
+                <input type="email" class="form-control" id="email" />
+              </div>
+              <div></div>
+              <div class="mb-3">
+                <label for="message-text" class="col-form-label"
+                  >Password:</label
+                >
+                <input type="password" class="form-control" id="password" />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">SignUp</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-white">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-white sticky-top">
       <div class="container">
-        <a class="navbar-brand h2" href="#"><span class="text-danger h2">Travel</span>Spot</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand h2" href="#"
+          ><span class="text-danger h2">Travel</span>Spot</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Book</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Travel</a>
+              <a class="nav-link" href="#travel">Travel</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Packages</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
                 Services
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item" href="#">Tour</a></li>
                 <li><a class="dropdown-item" href="#">Transportation</a></li>
-                <li><hr class="dropdown-divider"></li>
+                <li><hr class="dropdown-divider" /></li>
                 <li><a class="dropdown-item" href="#">Contact US</a></li>
               </ul>
             </li>
-            
           </ul>
           <form class="d-flex">
-            <input class="form-control me-2 bg-light" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn bg-danger text-white" type="submit">Search</button>
+            <input
+              class="form-control me-2 bg-light"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button
+              class="btn bg-danger text-white"
+              type="submit"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              Search
+            </button>
           </form>
         </div>
       </div>
     </nav>
 
     <!-- Image -->
-    
-    <section class="bg-dark p-5 ">
-      <div class="container d-flex justify-content-between align-content-end" >
 
+    <section class="bg-dark p-5">
+      <div class="container d-flex justify-content-between align-content-end">
         <div class="text-white me-5">
-          <span class="h1 d-block">Explore the hidden Gem of the world with US</span>
-          <span class="h6 d-block pt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae malesuada nibh, sit amet consectetur nulla. Sed iaculis pulvinar dui eu tempor. Vestibulum et maximus erat, vitae ultrices nulla.          </span>
-        <a class="text-decoration-none h1 btn btn-danger mt-3 px-3 py-2">BOOK NOW!</a>
+          <span class="h1 d-block"
+            >Explore the hidden Gem of the world with US</span
+          >
+          <span class="h6 d-block pt-3"
+            >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+            vitae malesuada nibh, sit amet consectetur nulla. Sed iaculis
+            pulvinar dui eu tempor. Vestibulum et maximus erat, vitae ultrices
+            nulla.
+          </span>
+          <a class="text-decoration-none h1 btn btn-danger mt-3 px-3 py-2"
+            >BOOK NOW!</a
+          >
         </div>
-        <img class="img-fluid w-50 border rounded-3 d-none d-lg-block" src="./images/travel2.avif"/>
+        <img
+          class="img-fluid w-50 border rounded-3 d-none d-lg-block"
+          src="./images/travel2.avif"
+        />
       </div>
     </section>
 
-
     <!-- Subscribtion section -->
 
-      <section class="mt-5">
-          <div class="container d-flex justify-content-between">
-            <span class="h3">Sign for New Announcement</span>
-            <form class="d-flex">
-              <input class="form-control me-2 bg-light" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn bg-danger text-white" type="submit">Search</button>
-            </form>
-          </div>
-      </section>
+    <section class="p-4 bg-light">
+      <div
+        class="container d-flex flex-column flex-sm-row justify-content-center align-items-center"
+      >
+        <span class="h3 text-center">Sign Up for New Announcement</span>
+        <form class="d-flex align-items-center ps-sm-5">
+          <input
+            class="form-control rounded-0 bg-light w-50"
+            type="search"
+            placeholder="Email"
+            aria-label="Search"
+          />
+          <button
+            class="btn bg-danger rounded-0 text-white"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+            type="submit"
+          >
+            SignUp
+          </button>
+        </form>
+      </div>
+    </section>
 
+    <!-- Cards -->
+
+    <section class="p-1 p-md-5" id="travel">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-md">
+            <div class="card bg-light m-3 m-md-2">
+              <img src="./images/book-img.png" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Explore the World</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Deleniti, nulla? Nisi, harum. Nemo, cumque! Ratione dicta vel
+                  eaque odio! Tempora, ipsum! Id, alias.
+                </p>
+                <a href="#" class="btn btn-danger">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="card bg-light m-3 m-md-2">
+              <img src="./images/book-img.png" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Explore the World</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Deleniti, nulla? Nisi, harum. Nemo, cumque! Ratione dicta vel
+                  eaque odio! Tempora, ipsum! Id, alias.
+                </p>
+                <a href="#" class="btn btn-danger">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md hoverable">
+            <div class="card bg-light m-3 m-md-2">
+              <img
+                src="./images/book-img.png"
+                class="img-fluid card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Explore the World</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Deleniti, nulla? Nisi, harum. Nemo, cumque! Ratione dicta vel
+                  eaque odio! Tempora, ipsum! Id, alias.
+                </p>
+                <a href="#" class="btn btn-danger">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Info -->
+    <section class="bg-dark text-light p-5">
+      <div class="container">
+        <div class="row gap-5 text-center">
+          <div class="col-md d-none d-md-block">
+            <img
+              class="img-fluid w-lg-75"
+              style="box-shadow: inset 0 0 10px 10px #ffffff"
+              src="./images/india.png"
+            />
+          </div>
+          <div class="col-md text-start">
+            <h2>Heading1</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio
+              tenetur sed amet officiis, similique porro beatae, dolores
+              mollitia iusto vero error tempore, quo ad libero. Debitis saepe
+              provident dolor corrupti?
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio
+              tenetur sed amet officiis, similique porro beatae, dolores
+              mollitia iusto vero error tempore, quo ad libero. Debitis saepe
+              provident dolor corrupti?
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio
+              tenetur sed amet officiis, similique porro beatae, dolores
+              mollitia iusto vero error tempore, quo ad libero. Debitis saepe
+              provident dolor corrupti?
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- accredion -->
+
+    <section class="p-5">
+      <div
+        class="container d-flex text-center flex-column justify-content-center align-items-center"
+      >
+        <div class="mb-5">
+          <h1>Frequently Asked Questions</h1>
+        </div>
+        <div
+          class="accordion w-75 bg-light"
+          id="accordionPanelsStayOpenExample"
+        >
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseOne"
+                aria-expanded="true"
+                aria-controls="panelsStayOpen-collapseOne"
+              >
+                Which are the most visited temple?
+              </button>
+            </h2>
+            <div
+              id="panelsStayOpen-collapseOne"
+              class="accordion-collapse collapse"
+              aria-labelledby="panelsStayOpen-headingOne"
+            >
+              <div class="accordion-body">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Blanditiis ipsam quaerat quo earum distinctio iste fugiat quidem
+                veritatis inventore ex beatae, molestiae, culpa voluptas itaque
+                laudantium? Corrupti pariatur autem voluptas.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseTwo"
+                aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseTwo"
+              >
+                What are the top places to visit during winter?
+              </button>
+            </h2>
+            <div
+              id="panelsStayOpen-collapseTwo"
+              class="accordion-collapse collapse"
+              aria-labelledby="panelsStayOpen-headingTwo"
+            >
+              <div class="accordion-body">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Laudantium saepe, et praesentium asperiores porro unde quo, sed
+                est necessitatibus cum quos voluptate facilis ea fugit maiores
+                nihil aliquid, sequi quibusdam!
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseThree"
+                aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseThree"
+              >
+                What is Bali famous for?
+              </button>
+            </h2>
+            <div
+              id="panelsStayOpen-collapseThree"
+              class="accordion-collapse collapse"
+              aria-labelledby="panelsStayOpen-headingThree"
+            >
+              <div class="accordion-body">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
+                ipsam alias repellat amet eos impedit dolorem nam voluptatem at
+                quas qui quasi corrupti possimus laboriosam, expedita,
+                temporibus accusamus recusandae inventore.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <section class="bg-dark text-light">
+      <div class="container pt-5 pb-3">
+        <div class="row justify-content-center">
+          <div class="col-md-6 col-lg-3 text-center text-sm-start py-4">
+            <h2 class="danger">Company</h2>
+            <ul class="list-group list-unstyled text-light">
+              <li class="list-group-item bg-transparent">
+                <a class="text-decoration-none text-light" href="#">About us</a>
+              </li>
+              <li class="list-group-item bg-transparent">
+                <a class="text-decoration-none text-light" href="#"
+                  >Our services</a
+                >
+              </li>
+              <li class="list-group-item bg-transparent">
+                <a class="text-decoration-none text-light" href="#"
+                  >Privacy policy</a
+                >
+              </li>
+              <li class="list-group-item bg-transparent">
+                <a class="text-decoration-none text-light" href="#"
+                  >Affiliate program</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-6 col-lg-3 text-center text-sm-start py-4">
+            <h2 class="dnager">Get Help</h2>
+            <ul class="list-group list-unstyled text-light">
+              <li class="list-group-item bg-transparent">
+                <a class="text-decoration-none text-light" href="#">Tours</a>
+              </li>
+              <li class="list-group-item bg-transparent">
+                <a class="text-decoration-none text-light" href="#">Travels</a>
+              </li>
+              <li class="list-group-item bg-transparent">
+                <a class="text-decoration-none text-light" href="#"
+                  >Treks & Camps</a
+                >
+              </li>
+              <li class="list-group-item bg-transparent">
+                <a class="text-decoration-none text-light" href="#"
+                  >Workshops</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-6 col-lg-3 text-center text-sm-start py-4">
+            <h2 class="danger">Online Services</h2>
+            <ul class="list-group list-unstyled text-light">
+              <li class="list-group-item bg-transparent">
+                <a class="text-decoration-none text-light" href="#">About us</a>
+              </li>
+              <li class="list-group-item bg-transparent">
+                <a class="text-decoration-none text-light" href="#"
+                  >Our services</a
+                >
+              </li>
+              <li class="list-group-item bg-transparent">
+                <a class="text-decoration-none text-light" href="#"
+                  >Privacy policy</a
+                >
+              </li>
+              <li class="list-group-item bg-transparent">
+                <a class="text-decoration-none text-light" href="#"
+                  >Affiliate program</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-6 col-lg-3 text-center text-sm-start py-4">
+            <h2 class="danger">Follow Us</h2>
+            <ul class="list-group list-unstyled list-inline text-light">
+              <li class="list-group-item bg-transparent">
+                <a class="text-decoration-none text-light" href="#"
+                  >Instagram</a
+                >
+              </li>
+              <li class="list-group-item bg-transparent">
+                <a class="text-decoration-none text-light" href="#">Twitter</a>
+              </li>
+              <li class="list-group-item bg-transparent">
+                <a class="text-decoration-none text-light" href="#">Facebook</a>
+              </li>
+              <li class="list-group-item bg-transparent">
+                <a class="text-decoration-none text-light" href="#">Quora</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
       integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
