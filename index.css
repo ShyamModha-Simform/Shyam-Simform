@@ -199,12 +199,20 @@ layer(bootstrap);
     font-size: 14px;
   }
 
+  .menubar-list-item:hover .dropdown-menu {
+    display: block;
+    margin-top: 193px;
+    cursor: pointer;
+  }
+
   .menubar-list-item-img {
     width: 64px;
     height: 64px;
+    cursor: pointer;
   }
   .menubar-list-item-detail {
     margin-top: 8px;
+    cursor: pointer;
   }
 
   .menubar-list-item-detail:hover {
@@ -375,7 +383,7 @@ layer(bootstrap);
   /* Modified styling of Content row 2............................... */
 
   .content-2 {
-    width: 100%;
+    width: 88%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -386,13 +394,13 @@ layer(bootstrap);
   }
 
   .content-left-2 {
-    width: 1410px;
+    width: 1600px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     background-color: #fff;
     padding: 20px;
-    margin-right: 10px;
+    margin-block: 20px;
     overflow-x: hidden;
     position: relative;
 
