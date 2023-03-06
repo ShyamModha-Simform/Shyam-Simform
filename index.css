@@ -197,6 +197,15 @@ layer(bootstrap);
     column-gap: 50px;
     font-weight: 500;
     font-size: 14px;
+    
+  }
+
+  .menubar-list-item > img {
+    transition: transform 0.3s ease;
+  }
+
+  .menubar-list-item:hover img {
+    transform: scale(1.15);
   }
 
   .menubar-list-item:hover .dropdown-menu {
@@ -296,8 +305,8 @@ layer(bootstrap);
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 10px;
-    min-width: 450px;
     overflow: hidden;
+    flex-wrap: wrap;
   }
 
   .content-left-heading-group1 {
@@ -368,20 +377,14 @@ layer(bootstrap);
     background-color: #fff;
     box-shadow: 0px 0px 9px -4px rgb(0 0 1);
   }
-  @media screen and (max-width: 800px) {
-    .content-right {
-      /* Apply some styles */
-      display: none;
-    }
-  }
-
+  
   .content-right-ads {
     width: 215px;
     height: auto;
   }
-
+  
   /* Modified styling of Content row 2............................... */
-
+  
   .content-2 {
     width: 88%;
     display: flex;
@@ -389,10 +392,10 @@ layer(bootstrap);
     align-items: center;
     justify-content: center;
     margin: 10px auto;
-
+    
     /* margin: 0 auto; */
   }
-
+  
   .content-left-2 {
     width: 1600px;
     display: flex;
@@ -403,12 +406,12 @@ layer(bootstrap);
     margin-block: 20px;
     overflow-x: hidden;
     position: relative;
-
+    
     box-shadow: 0px 0px 9px -4px rgb(0 0 1);
   }
-
+  
   /* Both scrolable buttons */
-
+  
   .content-left-button {
     background-color: whitesmoke;
     position: absolute;
@@ -424,3 +427,41 @@ layer(bootstrap);
     color: #212121;
   }
 }
+
+@media screen and (max-width: 500px){
+  .content-left-heading {
+    
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .content-right {
+    /* Apply some styles */
+    display: none;
+  }
+  
+  
+}
+
+@media screen and (max-width: 1054px) {
+  .webpage-body {
+    margin: 10px 5;
+  }
+  .content {
+    width: 100%;
+    margin: 0;
+  }
+  .content-left {
+    margin: 0;
+  }
+  .content-2 {
+    width: 100%;
+  }
+  .carousel-section-width {
+    width: 100%;
+  }
+}
+
+
