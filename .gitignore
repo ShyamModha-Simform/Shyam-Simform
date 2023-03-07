@@ -1,7 +1,7 @@
-# Avoiding Images
+# # Avoiding Images
 
-*.webp
-*.jpg
-*.jpeg
-*.png
-*.avif
+# *.webp
+# *.jpg
+# *.jpeg
+# *.png
+# *.avif
